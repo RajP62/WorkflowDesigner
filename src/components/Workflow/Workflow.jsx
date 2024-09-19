@@ -3,9 +3,7 @@ import "./Workflow.scss";
 
 const Workflow = () => {
   return (
-    <div className='workflow-container'>
-      
-    </div>
+    <div className='workflow-container text-center'></div>
   )
 }
 

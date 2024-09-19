@@ -17,10 +17,30 @@ body{
     margin: 20px;
 }
 
+.mb-1{
+    margin-bottom: 10px;
+}
+
+.mb-2{
+    margin-bottom: 20px;
+}
+
 .d-flex{
     display: flex;
 }
 
 .justify-between{
     justify-content: space-between;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.main-cont>div:nth-child(1){
+    border-right: 1px solid black;
+}
+
+.main-cont>div:nth-child(3){
+    border-left: 1px solid black;
 }

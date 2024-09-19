@@ -1,0 +1,32 @@
+.conditional_template {
+    width: 50px;              /* Adjust this for the size of the diamond */
+    height: 50px;             /* Same size as width to make it square */
+    background-color: white;     /* Color of the diamond */
+    transform: rotate(45deg);  /* Rotate the square by 45 degrees to form a diamond */
+    position: relative;        /* For alignment purposes */ 
+    border: 1px solid black;   /* The black border around the diamond */
+    box-sizing: border-box;    /* Ensure the border is included in the size */
+  }
+  
+  .conditional_template {
+    width: 50px;  /* Container to hold the rotated diamond and keep its alignment */
+    height: 50px;
+    position: relative;
+  }
+  
+
+  .task_template {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    background: white;
+  }
+
+
+  .end_template {
+    width: 70px;
+    height: 50px;
+    border: 1px solid black;
+    background: white;
+    border-radius: 70px / 40px;
+  }

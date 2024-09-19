@@ -1,28 +1,23 @@
 import React from 'react';
 import "./Blocks.scss"
 
-const Conditional = () => {
+export const Conditional = ({setActiveBlock}) => {
   return (
-    <div>
-      
+    <div className='conditional_template' draggable onDragStart={setActiveBlock({type: "conditional_block"})}>
     </div>
   )
 }
 
-const Task = () => {
+export const Task = ({setActiveBlock}) => {
     return (
-        <div>
+        <div className='task_template' draggable onDragStart={setActiveBlock({type: "task_block"})}>
 
         </div>
     )
 }
 
-const End = () => {
+export const End = ({setActiveBlock}) => {
     return (
-        <div>
-            <p>{message}</p>
-        </div>
+        <div className='end_template' draggable onDragStart={setActiveBlock({type: "end_block"})}></div>
     )
 }
-
-export {Blocks};
