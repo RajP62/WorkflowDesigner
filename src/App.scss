@@ -17,6 +17,15 @@ body{
     margin: 20px;
 }
 
+.mt-1{
+    margin-top: 10px;
+}
+
+.mt-2{
+    margin-top: 20px;
+}
+
+
 .mb-1{
     margin-bottom: 10px;
 }
@@ -37,10 +46,24 @@ body{
     text-align: center;
 }
 
+.display-block{
+    display: block;
+}
+
+.display-none{
+    display: none;
+}
+
+.visibility-hidden{
+    visibility: hidden;
+}
+
+// Utility classes ends
+
 .main-cont>div:nth-child(1){
-    border-right: 1px solid black;
+    border-right: 1px solid #DADCE0;
 }
 
 .main-cont>div:nth-child(3){
-    border-left: 1px solid black;
+    border-left: 1px solid #DADCE0;
 }

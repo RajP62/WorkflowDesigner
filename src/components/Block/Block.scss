@@ -1,0 +1,55 @@
+.conditional_block_template {
+  display: flex;
+  align-items: center;
+    width: 150px;              /* Adjust this for the size of the diamond */
+    height: 150px;             /* Same size as width to make it square */
+    background-color: white;     /* Color of the diamond */
+    transform: rotate(45deg);  /* Rotate the square by 45 degrees to form a diamond */
+    position: relative;        /* For alignment purposes */ 
+    border: 1px solid black;   /* The black border around the diamond */
+    box-sizing: border-box;    /* Ensure the border is included in the size */
+    position: relative;
+    overflow-y: auto;
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+
+  .conditional_block_template p{
+    transform: rotate(-45deg);
+  }
+  
+
+  .task_block_template {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background: white;
+    overflow-y: auto;
+  }
+
+
+  .end_block_template {
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    overflow-y: auto;
+    border: 1px solid black;
+    margin-left: 40px;
+    margin-top: 40px;
+    background: white;
+    border-radius: 50%;
+  }
+
+  .end_block_template * {
+    margin: 20px;
+  }
+
+  .draggable-input{
+    cursor: move;
+  }
+
+  .steps-container{
+    margin: 10px;
+  }

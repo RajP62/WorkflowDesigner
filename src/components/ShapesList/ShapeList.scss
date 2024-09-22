@@ -1,4 +1,5 @@
 .shape-list-container{
+    cursor: all-scroll;
     width: 20%;
     height: 100vh;
 }
@@ -6,4 +7,8 @@
 .blocks-cont{
     display: grid;
     grid-template-columns: auto;
+}
+
+.blocks-main-cont>div{
+    cursor: grab;
 }
