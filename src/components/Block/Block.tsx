@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "./Block.scss";
 import { useDispatch } from 'react-redux';
 import { BlockConstant } from '../../constants/blockConstant';
 import { ApiCall, Input, Output } from '../Steps/Steps';
-import { DropArea } from '../StepDropArea/StepDropArea';
 
 export const ConditionalBlock = ({setActiveBlock, block}) => {
     const currBlock = block?.block;
