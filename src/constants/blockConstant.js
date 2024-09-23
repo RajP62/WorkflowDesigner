@@ -7,3 +7,7 @@ export const BlockConstant = {
   SHIFT_STEP: "SHIFT_STEP",
   DELETE_STEP: "DELETE_STEP",
 };
+
+export const VariableConstant = {
+  ADD_VARIABLE: "ADD_VARIABLE"
+}

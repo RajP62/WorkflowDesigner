@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { BlockConstant } from '../../constants/blockConstant';
+import "./EditStep.scss";
 
 export const EditApiButton = ({activeStep}) => {
     const [editState, setEditState] = useState({API_CALL: [activeStep?.API_CALL || []]});
@@ -32,7 +33,7 @@ export const EditApiButton = ({activeStep}) => {
       dispatch({type: BlockConstant.EDIT_STEP, payload});
     }
   return (
-    <div>
+    <div className='edit-container-main'>
       <h3>Edit Step</h3>
       <div className='edit-step-container'>
         <div className='edit-step-form'>

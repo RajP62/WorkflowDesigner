@@ -1,8 +1,7 @@
 import { useDispatch } from "react-redux";
-import "./EditBlock.scss";
-
 import React, { useState } from 'react'
 import { BlockConstant } from "../../constants/blockConstant";
+import "./EditBlock.scss";
 
 export const EditConditionalBlock = ({currentBlock}) => {
   const [blockName, setBlockName] = useState(currentBlock?.key);
@@ -37,11 +36,11 @@ export const EditConditionalBlock = ({currentBlock}) => {
           <input type='text' value={editState?.if || ""} onChange={handleChange} name="if" placeholder='Enter condition' />
         </div>
         <div className='edit-block-form'>
-          <label>Then Block</label>
+          <label>Then</label>
           <input type='text' value={editState?.then || ""} onChange={handleChange} name="then" placeholder='Enter block name' />
         </div>
         <div className='edit-block-form'>
-          <label>Else Block</label>
+          <label>Else</label>
           <input type='text' value={editState?.else || ""} onChange={handleChange} name="else" placeholder='Enter block name' />
         </div>
         <div>

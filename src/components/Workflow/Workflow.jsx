@@ -2,7 +2,7 @@ import React from 'react';
 import "./Workflow.scss";
 import { useDispatch, useSelector } from 'react-redux';
 import { BlockConstant } from '../../constants/blockConstant';
-import { ConditionalBlock, EndBlock, TaskBlock } from '../Block/Block';
+import { ConditionalBlock, EndBlock, TaskBlock } from '../Block/Blocks';
 
 const Workflow = ({activeBlock, activeStep, setActiveBlock, setActiveStep}) => {
   const dispatch = useDispatch();

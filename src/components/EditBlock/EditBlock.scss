@@ -1,0 +1,26 @@
+.edit-container-main{
+    margin: 10px;
+    h3{
+        font-size: 20px;
+    }
+    label{
+        font-size:16px;
+    }
+    input{
+        padding: 5px 10px 5px 10px;
+    }
+}
+
+.edit-container-main *{
+    margin: 3px;
+}
+
+.delete-block{
+    padding: 5px 20px 5px 20px;
+    font-size: 15px;
+}
+
+.save-block-changes{
+    padding: 5px 20px 5px 20px;
+    font-size: 15px;
+}

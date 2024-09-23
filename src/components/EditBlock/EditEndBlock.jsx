@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { BlockConstant } from '../../constants/blockConstant';
+import "./EditBlock.scss";
 
 export const EditEndBlock = ({currentBlock}) => {
   const [blockName, setBlockName] = useState(currentBlock?.key);
@@ -22,7 +23,7 @@ export const EditEndBlock = ({currentBlock}) => {
         dispatch({type: BlockConstant.EDIT_BLOCK, payload});
     }
   return (
-    <div>
+    <div className='edit-container-main'>
       <div className='edit-block-container'>
       <h3>Edit Block</h3>
       <div className='edit-block-form'>

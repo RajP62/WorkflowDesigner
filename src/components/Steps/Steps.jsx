@@ -1,8 +1,8 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./Steps.scss";
 
-import React from 'react'
-import { BlockConstant } from "../../constants/blockConstant";
+import React, { useState } from 'react'
+import { BlockConstant, VariableConstant } from "../../constants/blockConstant";
 
 export const Output = ({setActiveStep, activeStep, step, index, dropIndex, block}) => {
   const dispatch = useDispatch();
@@ -32,7 +32,22 @@ export const Output = ({setActiveStep, activeStep, step, index, dropIndex, block
 
 export const Input = ({step, activeStep, setActiveStep, index, dropIndex, block}) => {
   const dispatch = useDispatch();
+  const variables = useSelector(state=> variables);
+
+  const inputName = step?.INPUT[0];
   step = {...step, key: block?.key, index};
+
+  const handleKeyDown = (event) => {
+    const {name, value} = event?.target;
+    if (event.key === 'Enter') {
+      onSubmitHandle(name, value);
+    }
+  };
+
+  const onSubmitHandle = (name, value) => {
+    const payload = {[name]: value};
+    dispatch({type: VariableConstant.ADD_VARIABLE, payload});
+  }
 
   const onDragEnter = (e) => {
     e?.stopPropagation();
@@ -52,7 +67,7 @@ export const Input = ({step, activeStep, setActiveStep, index, dropIndex, block}
   }
 
   return (
-    <input className='step_input draggable-input display-block' onDragLeave={onDragLeave} onDragEnter={onDragEnter} draggable onDrop={onDrop} onClick={(e) => {e?.stopPropagation(); setActiveStep(step)}} onDragStart={() => setActiveStep(step)} name={step?.INPUT[0]} type="text" placeholder={step?.INPUT[0]? `Please Enter ${step.INPUT[0]}` : ""}/>
+    <input defaultValue={variables? variables[inputName]: ""} autoComplete="off" onKeyDown={handleKeyDown} className='step_input draggable-input display-block' onDragLeave={onDragLeave} onDragEnter={onDragEnter} draggable onDrop={onDrop} onClick={(e) => {e?.stopPropagation(); setActiveStep(step)}} onDragStart={() => setActiveStep(step)} name={step?.INPUT[0]} type="text" placeholder={step?.INPUT[0]? `Please Enter ${step.INPUT[0]}` : "Edit input details"}/>
   )
 }
 

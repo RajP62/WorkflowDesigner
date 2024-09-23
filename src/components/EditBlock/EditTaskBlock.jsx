@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BlockConstant } from '../../constants/blockConstant';
 import { useDispatch } from 'react-redux';
+import "./EditBlock.scss";
 
 export const EditTaskBlock = ({currentBlock}) => {
   const [blockName, setBlockName] = useState(currentBlock?.key);
@@ -22,17 +23,17 @@ export const EditTaskBlock = ({currentBlock}) => {
       dispatch({type: BlockConstant.EDIT_BLOCK, payload});
   }
   return (
-    <div>
+    <div className='edit-container-main'>
       <div className='edit-block-container'>
       <h3>Edit Block</h3>
       <div className='edit-block-form'>
           <label>BlockName</label>
           <input type='text' value={blockName} onChange={(e) => setBlockName(e?.target?.value)}/>
         </div>
-        <div className='edit-block-form'>
+        {/* <div className='edit-block-form'>
           <label>Task</label>
           <input type='text' value={editState?.task} name='task' onChange={handleChange} placeholder='Enter task' />
-        </div>
+        </div> */}
         <div>
             <button className='delete-block' onClick={handleDelete}>Delete</button>
             <button className='save-block-changes' onClick={onSaveBlock}>Save</button>

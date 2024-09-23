@@ -42,7 +42,7 @@ export const Output = ({setActiveStep}) => {
 export const Input = ({setActiveStep}) => {
   return (
     <div>
-      <input className='input_template' draggable onDragStart={() => setActiveStep({INPUT: []})}></input>
+      <input className='input_template' placeholder='Input' draggable onDragStart={() => setActiveStep({INPUT: []})}></input>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { BlockConstant } from '../../constants/blockConstant';
+import "./EditStep.scss";
 
 export const EditInput = ({activeStep}) => {
     const dispatch = useDispatch();
@@ -17,18 +18,18 @@ export const EditInput = ({activeStep}) => {
     const handleDelete = () => {
       const payload = {...activeStep};
       dispatch({type: BlockConstant.DELETE_STEP, payload});
-  }
+    }
 
     const onSaveStep = ()=> {
         const payload = {...activeStep, data: editState};
       dispatch({type: BlockConstant.EDIT_STEP, payload});
     }
   return (
-    <div>
+    <div className='edit-container-main'>
       <h3>Edit Step</h3>
       <div className='edit-step-container'>
         <div className='edit-step-form'>
-          <label>Name</label>
+          <label>Variable</label>
           <input type='text' value={editState?.INPUT? editState.INPUT[0] : ""} name='name' onChange={handleChange} placeholder='Enter Name' />
         </div>
         <div>

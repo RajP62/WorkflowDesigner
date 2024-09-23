@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { BlockConstant } from '../../constants/blockConstant';
+import "./EditStep.scss";
 
 export const EditOutput = ({activeStep}) => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ export const EditOutput = ({activeStep}) => {
       dispatch({type: BlockConstant.EDIT_STEP, payload});
     }
   return (
-    <div>
+    <div className='edit-container-main'>
       <h3>Edit Step</h3>
       <div className='edit-step-container'>
         <div className='edit-step-form'>
