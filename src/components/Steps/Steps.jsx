@@ -32,7 +32,7 @@ export const Output = ({setActiveStep, activeStep, step, index, dropIndex, block
 
 export const Input = ({step, activeStep, setActiveStep, index, dropIndex, block}) => {
   const dispatch = useDispatch();
-  const variables = useSelector(state=> variables);
+  const variables = useSelector(state=> state.variables);
 
   const inputName = step?.INPUT[0];
   step = {...step, key: block?.key, index};
