@@ -1,9 +1,9 @@
-type TActiveBlock = {
-    block: string;
-}
+import { StringMappingType } from "typescript";
 
-type TActiveStep = {
-    id: string;
-    name: string;
-    description: string;
+export type TBlock={
+    type: string,
+};
+
+export type TStep={
+    
 }
