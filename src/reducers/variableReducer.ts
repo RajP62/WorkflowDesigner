@@ -3,7 +3,12 @@ import { VariableConstant } from "../constants/blockConstant";
 const initState = {
 };
 
-const VariableReducer = (state = initState, action) => {
+type TActionType = {
+  type: string,
+  payload: object
+}
+
+const VariableReducer = (state = initState, action:TActionType) => {
   const payload = action.payload;
   switch (action.type) {
     case VariableConstant.ADD_VARIABLE: {

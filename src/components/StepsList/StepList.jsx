@@ -1,5 +1,5 @@
 
-import { ApiCall, Input, Output } from "../Shapes/Shape";
+import { ApiCall, Input, Output } from "../Shapes/Shape.jsx";
 import "./StepList.scss";
 
 import React from 'react'

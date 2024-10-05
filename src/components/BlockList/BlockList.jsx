@@ -1,5 +1,5 @@
 import React from 'react';
-import { Conditional, End, Task } from '../Shapes/Shape';
+import { Conditional, End, Task } from '../Shapes/Shape.jsx';
 
 const BlockList = ({setActiveBlock}) => {
   return (

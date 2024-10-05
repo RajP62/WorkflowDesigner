@@ -1,9 +1,10 @@
 import { BlockConstant } from "../constants/blockConstant";
+import { TBlock } from "../types/global";
 
 const initState = {};
 
 const BlockReducer = (state = initState, action) => {
-  const payload = action?.payload;
+  const payload = action.payload;
   switch (action.type) {
     case BlockConstant.ADD: {
       if (!Object.keys(state).length) {

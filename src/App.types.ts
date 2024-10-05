@@ -1,10 +1,26 @@
+import { IApiCallStep, IInputStep, IOutputStep, TConditionalBlock, TEndBlock, TTaskBlock } from "./types/global";
+
+interface IActiveOutputStep extends IOutputStep{
+    index: number,
+    key: string
+}
+
+interface IActiveInputStep extends IInputStep{
+    index: number,
+    key: string
+}
+
+interface IActiveApiCallStep extends IApiCallStep {
+    index: number,
+    key: string
+}
+
 export type TActiveBlock = {
-    block: {
-        type: string
-    };
+    block: TTaskBlock | TConditionalBlock | TEndBlock;
     key: string
 };
 
-type TOutputStep = {
-    OUTPUT: [string]
-}
+export type TActiveStep = IActiveOutputStep | IActiveInputStep | IActiveApiCallStep;
+
+
+
